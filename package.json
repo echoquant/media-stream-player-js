@@ -106,5 +106,8 @@
       "node"
     ]
   },
-  "packageManager": "yarn@3.0.2"
+  "packageManager": "yarn@3.0.2",
+  "resolutions": {
+    "media-stream-library@10.4.0": "patch:media-stream-library@npm:10.4.0#.yarn/patches/media-stream-library-npm-10.4.0-4de43e536e"
+  }
 }

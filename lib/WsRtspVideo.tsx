@@ -98,6 +98,7 @@ export const WsRtspVideo: React.FC<WsRtspVideoProps> = ({
   offset = 0,
   autoRetry = false,
 }) => {
+  console.log(`WsRTSVideo ${ws} -> ${rtsp}`)
   let videoRef = useRef<HTMLVideoElement>(null)
 
   // Forwarded refs can either be a callback or the result of useRef
@@ -185,7 +186,7 @@ export const WsRtspVideo: React.FC<WsRtspVideoProps> = ({
       rtsp.length > 0 &&
       videoEl !== null
     ) {
-      debugLog('create pipeline', ws, rtsp)
+      console.log('create pipeline', ws, rtsp)
       const newPipeline = new pipelines.Html5VideoPipeline({
         ws: { uri: ws },
         rtsp: { uri: rtsp },

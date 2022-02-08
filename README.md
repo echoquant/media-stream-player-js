@@ -96,6 +96,16 @@ do that is Pythons simpleHttpServer.
 
 First run
 
+Patched media stream library should be used.
+Patch already present at: .yarn/patches/media-stream-library-npm-10.4.0-4de43e536e
+But if it needs to be reapplied/rebuild with new version use
+```
+yarn patch media-stream-library
+# follow instruction and use proper folder
+cp media-stream-library.min.js /private/var/folders/v5/cf7nrdnd4mjckxmjfn4_vv1m0000gn/T/xfs-548b973c/user/dist
+yarn patch-commit -s /private/var/folders/v5/cf7nrdnd4mjckxmjfn4_vv1m0000gn/T/xfs-548b973c/user
+```
+
 ```bash
 yarn build
 ```

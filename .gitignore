@@ -19,6 +19,7 @@ cypress/screenshots/
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+!.yarn/patches
 node_modules/
 
 # ESLint
