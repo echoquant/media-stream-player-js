@@ -111,9 +111,8 @@ export const WsRtspPlaybackArea: React.FC<PlaybackAreaProps> = ({
       const rtsp_port = url.port || '554'
 
       const ws_proto = secure ? Protocol.WSS : Protocol.WS
-      const ws_proxy = wsproxy
-        ? wsproxy
-        : `${window.location.hostname}:${window.location.port}`
+      const port_suffix = window.location.port ? `:${window.location.port}` : ''
+      const ws_proxy = wsproxy || `${window.location.hostname}${port_suffix}`
       ws = `${ws_proto}//${ws_proxy}/websockify/?ip=${rtsp_host}&port=${rtsp_port}`
     }
 
