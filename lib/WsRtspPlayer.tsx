@@ -306,7 +306,6 @@ export const WsRtspPlayer = forwardRef<PlayerNativeElement, PlayerProps>(
                 onEnded={onEnded}
                 onSdp={onSdp}
                 metadataHandler={metadataHandler}
-                secure={secure}
                 autoRetry={autoRetry}
               />
             </Layer>

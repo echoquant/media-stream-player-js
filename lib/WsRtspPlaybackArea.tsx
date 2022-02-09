@@ -101,7 +101,6 @@ export const WsRtspPlaybackArea: React.FC<PlaybackAreaProps> = ({
   secure = window.location.protocol === Protocol.HTTPS,
   autoRetry = false,
 }) => {
-  console.log(`playing ${rtspurl} -> ${wsproxy}`)
   if (format === Format.RTP_H264) {
     const rtsp = rtspurl
     let ws = ''
@@ -115,6 +114,9 @@ export const WsRtspPlaybackArea: React.FC<PlaybackAreaProps> = ({
       const ws_proxy = wsproxy || `${window.location.hostname}${port_suffix}`
       ws = `${ws_proto}//${ws_proxy}/websockify/?ip=${rtsp_host}&port=${rtsp_port}`
     }
+    console.log(
+      `playing ${rtsp} -> ${ws}, secure: ${secure}, proto: ${window.location.protocol}`,
+    )
 
     return (
       <WsRtspVideo
