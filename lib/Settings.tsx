@@ -113,6 +113,59 @@ export const Settings: React.FC<SettingsProps> = ({
   return (
     <SettingsMenu>
       <SettingsItem>
+        <div>Format</div>
+        <select onChange={changeFormat} defaultValue={format}>
+          <option value="RTP_H264">H.264 (RTP over WS)</option>
+          <option value="MP4_H264">H.264 (MP4 over HTTP)</option>
+          <option value="RTP_JPEG">Motion JPEG</option>
+          <option value="JPEG">Still image</option>
+        </select>
+      </SettingsItem>
+      <SettingsItem>
+        <div>Resolution</div>
+        <select value={parameters['resolution']} onChange={changeResolution}>
+          <option value="">default</option>
+          <option value="1920x1080">1920 x 1080 (FHD)</option>
+          <option value="1280x720">1280 x 720 (HD)</option>
+          <option value="800x600">800 x 600 (VGA)</option>
+        </select>
+      </SettingsItem>
+      <SettingsItem>
+        <div>Rotation</div>
+        <select value={parameters['rotation']} onChange={changeRotation}>
+          <option value="0">0</option>
+          <option value="90">90</option>
+          <option value="180">180</option>
+          <option value="270">270</option>
+        </select>
+      </SettingsItem>
+      <SettingsItem>
+        <div>Compression</div>
+        <select value={parameters['compression']} onChange={changeCompression}>
+          <option value="">default</option>
+          <option value="0">0</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+          <option value="90">90</option>
+          <option value="100">100</option>
+        </select>
+      </SettingsItem>
+      <SettingsItem>
+        <div>Text overlay</div>
+        <input name="textstring" value={textString} onChange={changeParam} />
+        <Switch
+          name="text"
+          checked={parameters['text'] === '1'}
+          onChange={changeParam}
+        />
+      </SettingsItem>
+      <SettingsItem>
         <div>Stats overlay</div>
         <Switch checked={showStatsOverlay} onChange={changeStatsOverlay} />
       </SettingsItem>
