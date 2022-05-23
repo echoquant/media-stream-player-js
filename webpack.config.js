@@ -8,7 +8,7 @@ module.exports = {
   mode: 'production',
               optimization: {
                 // We no not want to minimize our code.
-                minimize: true
+                minimize: false
         },
   output: {
     library: 'mediaStreamPlayer',
