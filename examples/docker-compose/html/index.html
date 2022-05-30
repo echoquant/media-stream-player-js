@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example of H.264 RTSP video streaming via WebSocket Proxy</title>
+  </head>
+
+  <body>
+    <div style="width: 640px; height: 480px; padding: 10px">
+      <media-stream-player
+	variant="normal"
+	format="RTP_H264"
+        rtspurl="rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mp4"
+        wsproxy="172.16.14.129:8012/websockify/?ip=wowzaec2demo.streamlock.net&port=554"
+      />
+    </div>
+    <script src="./js/media-stream-player.legacy.min.js"></script>
+  </body>
+</html>
