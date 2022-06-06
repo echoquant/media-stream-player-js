@@ -9315,7 +9315,7 @@ fsevents@~2.3.1:
 
 "media-stream-library@patch:media-stream-library@npm:10.4.0#.yarn/patches/media-stream-library-npm-10.4.0-4de43e536e::locator=media-stream-player%40workspace%3A.":
   version: 10.4.0
-  resolution: "media-stream-library@patch:media-stream-library@npm%3A10.4.0#.yarn/patches/media-stream-library-npm-10.4.0-4de43e536e::version=10.4.0&hash=8ed308&locator=media-stream-player%40workspace%3A."
+  resolution: "media-stream-library@patch:media-stream-library@npm%3A10.4.0#.yarn/patches/media-stream-library-npm-10.4.0-4de43e536e::version=10.4.0&hash=86ed58&locator=media-stream-player%40workspace%3A."
   dependencies:
     buffer: 6.0.3
     debug: 4.3.2
@@ -9326,7 +9326,7 @@ fsevents@~2.3.1:
     ws: 8.2.0
   bin:
     live: examples/node/player.js
-  checksum: bb6926fd0e12084ada4e37726f2cdeb9ea7b9a935cb54940012bc1f3cafdabad7b870bd76a4260980d701e8b689ada2fe9d81de13877f7efec6cbff088ddd060
+  checksum: 0c35dc33b774ae33428329d4cfa5d8928eadd86ba395caf4f335abc4967ec043a40ccef4faaf96bda361313ee46119a01d5b7c9dcf1dfa6c6013c4dbea1c1d57
   languageName: node
   linkType: hard
 
